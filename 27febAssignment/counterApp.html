@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter App</title>
+    <style>
+        body{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .header{
+            text-align: center;
+            box-shadow: 0 0 5px black;
+            padding: 20px;
+            border-radius: 5px;
+            font-size: 20px;
+            background-color: #da7b7b;
+            border: #2d81e0 solid 3px;
+        }
+        .header h1{
+            margin-bottom: 10px;
+        }
+        .header .header-list button,span{
+            margin-top: 10px;
+            margin-bottom: 20px;
+            font-size: 18px;
+            height: 30px;
+        }
+        button {
+            padding: 5px 15px;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #2d81e0;
+            }
+
+            #display-value{
+            padding: 5px 15px;
+            width: 35px;
+            height: 35px;
+            border: 1px solid black;
+            font-size: 25px;
+            background-color: #6f0af5;
+            
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="header">
+        <h1>Counter App</h1>
+        <div class="header-list">
+            <button id="decrement-1">Decrement by 1</button>
+            <span id="display-value">0</span>
+            <button id="increment-1">Increment by 1</button>
+        </div>
+        <button id="reset-btn">Reset Value</button>
+    </div>
+
+    <script>
+        const decrement = document.getElementById("decrement-1");
+        const increment = document.getElementById("increment-1");
+        const reset = document.getElementById("reset-btn");
+        const dispValue = document.getElementById("display-value");
+
+        // for decrementing the value
+        // decrement.addEventListener("click", () =>{
+        //     const val = Number(dispValue.innerText);
+        //     if(val > 0){
+        //         dispValue.innerText = val-1;
+        //     }
+        //     else{
+        //         alert("Negative are not allowed");
+        //     }
+
+        // });
+
+        // //incrementing the number by 1
+        // increment.addEventListener("click", ()=>{
+        //     const val = Number(dispValue.innerText);
+        //     if(val >= 10){
+        //         alert("10 + values are not allowed")
+        //     }
+        //     else{
+        //         dispValue.innerText = val+1;
+        //     }
+
+        // });
+
+        // reset.addEventListener("click" , ()=>{
+        //     dispValue.innerText = 0;
+        // });
+
+            decrement.addEventListener("click" , ()=>{
+                const val = Number(dispValue.innerText) ;
+                if(val > 0){
+                    dispValue.innerText = val-1;
+                }
+                else{
+                    alert("No negative allowed");
+                }
+            });
+
+            increment.addEventListener("click" ,()=>{
+                const val = Number(dispValue.innerText) ;
+                if(val < 10){
+                    dispValue.innerText = val+1;
+                }
+                else{
+                    alert("10+ values are not allowed");
+                }
+            });
+
+            reset.addEventListener("click" , () =>{
+                dispValue.innerText = 0 ;
+            });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listener</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            height: 100vh;
+        }
+        #box{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        /* #box .clickme{
+             font-weight: 600;
+             font-size: 25px;
+             padding: 10px 15px;
+             width: 20%;
+             border: 2px solid red ;
+             text-align: center;
+             cursor: pointer;
+        } */
+
+        #box .dbclick{
+             font-weight: 600;
+             font-size: 25px;
+             padding: 10px 15px;
+             width: 20%;
+             border: 2px solid red ;
+             text-align: center;
+             cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div id="box"> -->
+        <!-- <p class="clickme">CLick On Me </p> -->
+        <!-- <p class="dbclick">CLick On Me </p>
+    </div> -->
+
+    <div>
+        <h1 id="display"></h1>
+        <input id="input-box" type="text" placeholder="Type somthing..."/>
+    </div> 
+    
+    <script>
+        const boxElement = document.getElementById("box");
+
+            // single mouse click
+
+        // boxElement.addEventListener("click" , function(){
+        //     alert("You Just clicked me");
+        // });
+
+            // double mouse click
+
+        // boxElement.addEventListener("dblclick" , function(){
+        //     alert("Double click alert message");
+        // });
+
+        // Mouse over
+
+        // boxElement.addEventListener("mouseover" , function(){
+        //     alert("mouseover alert message");
+        // });
+
+        // mouse out
+
+        // boxElement.addEventListener("mouseout" , function(){
+        //     alert("Mouse out alert message");
+        // });
+
+        let inputBox = document.getElementById("display");
+        let display = document.getElementById("input-box");
+
+
+        // // adding a keypress event listener to the inputbox
+        inputBox.addEventListener('keypress', function(e){
+            display.innerText ="you have Pressed " + e.key
+        })
+
+    </script>
+</body>
+</html>
